@@ -78,7 +78,7 @@
 }
 
 .nav-bar nav a:after {
-    content: '';
+    content: 'PORTFOLIO';
     font-size: 9px;
     letter-spacing: 2px;
     position: absolute;

@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-
 import logo from '../../assets/img/logo.png'
 import andrey from '../../assets/img/andrey.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,8 +8,6 @@ import {
   faUser,
   faEnvelope,
   faBars,
-
-  
   faScrewdriverWrench,
 } from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom'
@@ -24,10 +21,17 @@ export const Sidebar = () => {
             {
                 // when screen size is less than 768px, show the menubar on the top of the page else show the Sidebar on the left of the page
 
+              
+
+
 
             }
-            <div id='menu' className='bg-green-400 md:hidden justify-center text-center'>
-            <FontAwesomeIcon icon={faBars} color="#4d4d4e" />            
+            <div id='menu' className='bg-green-400 md:hidden flex justify-center text-center items-center content-center'>
+            <div o class="space-y-2">
+  <span class="block w-5 h-0.5 bg-gray-600"></span>
+  <span class="block w-8 h-0.5 bg-gray-600"></span>
+  <span class="block w-8 h-0.5 bg-gray-600"></span>
+</div>     
             </div>
 
     <div id='sidebar' className=' hidden md:block nav-bar w-16 bg-dark h-full absolute top-0  min-h-max'>
