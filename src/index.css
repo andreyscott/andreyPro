@@ -73,6 +73,9 @@
     opacity: 0;
 }
 
+.icons{
+    @apply ease-in-out transition-all duration-300 hover:text-red-600  hover:opacity-0 after:opacity-100 
+}
 .nav-bar nav a:hover:after {
     opacity: 1;
 }

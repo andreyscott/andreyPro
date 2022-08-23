@@ -26,15 +26,16 @@ export const Sidebar = () => {
 
 
             }
-            <div id='menu' className='bg-green-400 md:hidden flex justify-center text-center items-center content-center'>
+            {/* <div id='menu' className='bg-green-400 md:hidden flex justify-center text-center items-center content-center'>
             <div o class="space-y-2">
   <span class="block w-5 h-0.5 bg-gray-600"></span>
   <span class="block w-8 h-0.5 bg-gray-600"></span>
   <span class="block w-8 h-0.5 bg-gray-600"></span>
 </div>     
-            </div>
+            </div> */}
 
     <div id='sidebar' className=' hidden md:block nav-bar w-16 bg-dark h-full absolute top-0  min-h-max'>
+   
     <Link className="block py-2 px-0" to="/">
           <img    className=' mt-2 m-0 p-0' src={logo} alt="Logo" />
           <img className="justify-center text-center  items-center absolute left-1 top-14  w-14 pb-8 " src={andrey} alt="slobodan" />
