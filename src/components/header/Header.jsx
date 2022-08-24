@@ -4,26 +4,21 @@ import logo from '../../assets/img/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import {
-  faHome,
-  faUser,
-  faEnvelope,
-  faBars,
-  faXmark,
-  faScrewdriverWrench,
-} from '@fortawesome/free-solid-svg-icons'
+    BadgeCheckIcon,
+    CollectionIcon,
+    HomeIcon,
+    LightningBoltIcon,
+    SearchIcon,
+    UserIcon,
+  } from '@heroicons/react/outline';
+  import { faHome, faXmark, faBars} from '@fortawesome/free-solid-svg-icons';
 import { Link, NavLink } from 'react-router-dom'
+import HeaderItem from "../headerItems/HeaderItems";
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(true)
 
 
-    const HeaderItem = ({ Icon, title }) =>{
-        return(
-          <div className="group flex flex-col items-center cursor-pointer w-12 sm:w-20 hover:text-white">
-            <Icon className="h-8 mb-1 group-hover:animate-bounce"/>
-            <p className="opacity-0 group-hover:opacity-100 tracking-widest transition" >{title}</p>
-          </div>
-        )
-      }
+   
     //   function Header(){
     //     return(
     //       <header className="flex flex-col justify-between p-5 sm:flex-row">
@@ -74,40 +69,15 @@ export const Header = () => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-                                
-                <div className="flex cont flex-row bg-green-300 h-12  w-full z-20 min-h-fit  md:flex-row md:mx-6 ">
-        <nav className=' w-full mx-3 flex justify-around items-center'>
-                <NavLink className='text-2xl ' exact="true" activeclassname="active" to="/">
-                {/* <HeaderItem Icon={  faHome} title="HOME"/> */}
-                    <FontAwesomeIcon className=' about-link hover:animate-bounce icons' icon={faHome} color="#333" />
-                </NavLink>
-                <NavLink activeclassname="active" className="about-link" to="/about">
-                    <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-                </NavLink>
-                <NavLink
-                    activeclassname="active"
-                    className="skills-link"
-                    to="/skills"
-                >
-                    <FontAwesomeIcon icon={faScrewdriverWrench} color="#4d4d4e" />
-                </NavLink>
-                <NavLink
-                    activeclassname="active"
-                    className="contact-link"
-                    to="/contact"
-                >
-                    <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-                </NavLink>
-                </nav>
-
-                {/* <div className="flex justify-between max-w-2xl">
-              <HeaderItem Icon={  faHome} title="HOME"/>
-              <HeaderItem Icon={faUser} title="TRENDING"/>
-              <HeaderItem Icon={faEnvelope} title="VERIFIED"/>
-              <HeaderItem Icon={faBars} title="COLLECTION"/>
-            </div> */}
-                
-                    
+                <div className="flex cont flex-row  nav-bar-row  h-12  w-full z-20 min-h-fit  md:flex-row md:mx-6 ">
+        <nav className=' w-full mx-3 flex justify-around  max-w-2xl items-center'>
+        <HeaderItem title="HOME" Icon={HomeIcon} />
+          <HeaderItem title="TRENDING" Icon={LightningBoltIcon} />
+          <HeaderItem title="VERIFIED" Icon={BadgeCheckIcon} />
+          <HeaderItem title="COLLECTIONS" Icon={CollectionIcon} />
+          <HeaderItem title="SEARCH" Icon={SearchIcon} />
+          <HeaderItem title="ACCOUNT" Icon={UserIcon} />
+                </nav>                   
                 </div>
                 </Transition>
 

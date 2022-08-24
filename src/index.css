@@ -4,9 +4,9 @@
 
 @layer components {
 
-  .navlink{
+  /* .navlink{
       @apply transition-all duration-300 ease-in-out hover:text-blue opacity-0 after:opacity-100;
-  }
+  } */
 
   img{
     display: block;
@@ -24,6 +24,8 @@
     z-index: 3;
     min-height: 500px;
 }
+
+
 
 .nav-bar .logo {
     display: block;
@@ -51,6 +53,11 @@
     width: 100%;
 }
 
+.nav-bar-row nav{
+    text-align: center;
+    width: 100%;
+}
+
 .nav-bar nav a {
     font-size: 22px;
     color: #4d4d4e;
@@ -64,23 +71,50 @@
 .nav-bar nav a i {
     transition: all 0.3s ease-out;
 }
+.nav-bar-row nav a i {
+    transition: all 0.4s ease-out;
+}
 
 .nav-bar nav a:hover {
     color: #ffd700;
+}
+.nav-bar-row nav a:hover{
+    color: green;
+
 }
 
 .nav-bar nav a:hover svg {
     opacity: 0;
 }
 
-.icons{
-    @apply ease-in-out transition-all duration-300 hover:text-red-600  hover:opacity-0 after:opacity-100 
+.nav-bar-row nav a:hover svg {
+    opacity: 0;
 }
+/* .icons{ */
+    /* @apply ease-in-out transition-all duration-300 hover:text-red-600  hover:opacity-0 after:opacity-100  */
+/* } */
 .nav-bar nav a:hover:after {
     opacity: 1;
 }
 
+.nav-bar-row nav a:hover::after{
+    opacity: 1;
+}
+
 .nav-bar nav a:after {
+    content: 'PORTFOLIO';
+    font-size: 9px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.nav-bar-row nav a:after {
     content: 'PORTFOLIO';
     font-size: 9px;
     letter-spacing: 2px;
@@ -110,11 +144,41 @@
     content: 'PORTFOLIO';
 }
 
+.nav-bar-row nav a:first-child:after {
+    content: 'ABOUT';
+
+}
+
+.nav-bar-row nav a.skills-link:after {
+content: 'Skills'
+}
+
+.nav-bar-row nav a.contact-link:after {
+    content: 'CONTACT';
+}
+
+.nav-bar-row nav a.portfolio-link:after {
+    content: 'PORTFOLIO';
+}
+
 .nav-bar nav a.active svg {
+    color: #ffd700;
+}
+.nav-bar-row nav a.active svg {
     color: #ffd700;
 }
 
 .nav-bar ul {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+}
+.nav-bar-row ul {
     position: absolute;
     bottom: 20px;
     width: 100%;
@@ -134,6 +198,9 @@
 }
 
 .nav-bar ul li a:hover {
+    color: #ffd700;
+}
+.nav-bar-row ul li a:hover {
     color: #ffd700;
 }
 }
