@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import logo from '../../assets/img/logo.png'
 import andrey from '../../assets/img/andrey.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,15 +7,11 @@ import {
   faHome,
   faUser,
   faEnvelope,
-  faBars,
   faScrewdriverWrench,
 } from '@fortawesome/free-solid-svg-icons'
 import { Link, NavLink } from 'react-router-dom'
 
 export const Sidebar = () => {
-
-    const [isOpen, setIsOpen] = React.useState(false)
-
   return (
     <>
             {
@@ -26,13 +22,7 @@ export const Sidebar = () => {
 
 
             }
-            {/* <div id='menu' className='bg-green-400 md:hidden flex justify-center text-center items-center content-center'>
-            <div o class="space-y-2">
-  <span class="block w-5 h-0.5 bg-gray-600"></span>
-  <span class="block w-8 h-0.5 bg-gray-600"></span>
-  <span class="block w-8 h-0.5 bg-gray-600"></span>
-</div>     
-            </div> */}
+         
 
     <div id='sidebar' className=' hidden md:block nav-bar w-16 bg-dark h-full absolute top-0  min-h-max'>
    
