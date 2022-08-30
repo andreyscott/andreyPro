@@ -7,8 +7,10 @@ const Box = styled.div`
   display: flex;
   cursor: pointer;
   position: fixed;
-  right: 8rem;
-  top: 3rem;
+  right: 12rem;
+  top: 2.3rem;
+  width: 5rem;
+  max-width: 5rem;
   z-index: 3;
 
   & > *:nth-child(1) {
@@ -33,8 +35,8 @@ const Box = styled.div`
     color: #00ff7f;
     font-size: 18px;
     position: absolute;
-    margin-top: -20px;
-    left: -60px;
+    margin-top: -2rem;
+    left: -0.75;
     opacity: 0.9;
     line-height: 20 px;
   }
@@ -46,8 +48,8 @@ const Box = styled.div`
     font-size: 18px;
     line-height: 20px;
     position: absolute;
-    left: -60px;
-    bottom: -20px;
+    left: -0.75rem;
+    margin-top: 1rem;
     opacity: 0.9;
   }
 `
@@ -63,9 +65,21 @@ const play = keyframes`
     transform:scaleY(1);
 }
 `
+const LineContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+`
+  
 const Line = styled.span`
   background: #00ff7f;
   border: 1px solid;
+  
+
 
   animation: ${play} 1s ease infinite;
   animation-play-state: ${(props) => (props.click ? 'running' : 'paused')};
@@ -87,7 +101,8 @@ const SoundBar = () => {
     }
   }
   return (
-    <Box onClick={() => handleClick()}>
+    <Box  onClick={() => handleClick()}>
+      
       <Line click={click} />
       <Line click={click} />
       <Line click={click} />
