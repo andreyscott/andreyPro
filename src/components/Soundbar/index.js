@@ -65,15 +65,15 @@ const play = keyframes`
     transform:scaleY(1);
 }
 `
-const LineContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-`
+// const LineContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   height: 100%;
+//   position: relative;
+// `
   
 const Line = styled.span`
   background: #00ff7f;
