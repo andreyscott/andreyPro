@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom'
 import Layout from './layouts/index'
 
-// import Home from './components/Home'
+import Home from './pages/Home'
 // import About from './components/About'
 // import Contact from './components/Contact'
 // import Skills from './components/Skills'
 import Soundbar from './components/Soundbar'
-// import './App.scss'
+import './App.scss'
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
       <Soundbar />
       <Routes>
         <Route path="/" element={<Layout />}>
-          {/* <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
+          <Route index element={<Home />} />
+          {/* <Route path="about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/skills" element={<Skills />} /> */}
         </Route>
