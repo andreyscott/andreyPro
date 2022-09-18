@@ -4,7 +4,8 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../components/AnimatedLetters'
 // import LogoTitle from '../../assets/images/logo-s.png'
 // import Logo from '../assets/img/logo.png'
-import LogoTitle from '../assets/img/andrey.png'
+import LogoTitle from '../assets/img/logo.png'
+// '../assets/img/andrey.png'
 import './index.scss'
 
 const Home = () => {
@@ -34,6 +35,7 @@ const Home = () => {
             <span className={`${letterClass} _14`}>'m</span>
             <img
               src={LogoTitle}
+              className={`${letterClass} okk _15`}
               alt="JavaScript Developer Name, Web Developer Name"
             />
             <AnimatedLetters
