@@ -4,8 +4,31 @@
       left: 10%;
       top: 50%;
       transform: translateY(-50%);
-      width: 40%;
+      width: 55%;
       max-height: 90%;
+
+      .okk{
+        height: 70px;
+        width: 70px;
+        padding: 0;
+        margin: 0;
+        margin-left: 00.5rem;
+      
+
+      // create a media query for mobile devices
+      @media (max-width: 768px) {
+
+        .okk{
+          height: 50px;
+          width: 50px;
+          padding: 0;
+          margin: 0;
+          margin-left: 00.5rem;
+        }
+      
+        
+      }
+    }
   
       h1 {
         color: #fff;
